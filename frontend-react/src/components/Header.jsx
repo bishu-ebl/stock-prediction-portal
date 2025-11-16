@@ -21,9 +21,13 @@ const Header = () => {
         <Link className='navbar-brand text-light' to="/">Stock Prediction Portal</Link>
         <div>
             {/* <a className='btn btn-outline-info' href="">Login</a> */}
-            {isLoggedIn ? (
-              // <span className='text-light'>Logout</span>
+            {isLoggedIn ? ( 
+              <>
+              {/* <span className='text-light'>Logout</span> */}
+              <Button text='Dashboard' class="btn-info" url="/dashboard"/>
+              &nbsp;
               <button className='btn btn-danger' onClick={handleLogout}>Logout</button>
+              </>
             ) : (
               <>
               <Button text='Login' class="btn-outline-info" url="/login"/>
